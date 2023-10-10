@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      // Code One
+      /*"will not work" because the styling come before bulding h1
+      and the combiler read code line by line*/
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      // Code Two
+      /*
+      This code line will run Correctly 
+because we give him an order when the page reloaded renders all Elements. Then start to 
+style that Elements
+      */
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      // Code Three
+      /*
+      This line of code will run correctly
+Because the script tag is written at the end of the page and the last thing in the body 
+element*/
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html>
